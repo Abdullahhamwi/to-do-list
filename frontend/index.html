@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="modern-kart-premium">
+        <div class="ust-bar">
+            <h2>To-Do List</h2>
+            <button id="tema-degistir-butonu" class="tema-btn" title="Karanlık / Aydınlık Mod">🌙</button>
+        </div>
+
+        <div class="aktif-bolum">
+            <div class="giris-alani">
+                <div class="input-grubu">
+                    <input type="text" id="gorev-girisi" placeholder="Yeni bir görev yazın..." autocomplete="off">
+                    <div id="onerilenler-kutusu" class="onerilenler-kutusu"></div>
+                </div>
+                <button id="ekleme-butonu" class="canli-btn ekle-btn">Ekle</button>
+                <button id="tumunu-sil-butonu" class="canli-btn tumunu-sil-btn">Tümünü Sil</button>
+            </div>
+
+            <div class="detay-secenekleri">
+                <div class="detay-grubu">
+                    <label for="oncelik-secimi">Öncelik</label>
+                    <select id="oncelik-secimi">
+                        <option value="dusuk">🟢 Düşük</option>
+                        <option value="orta" selected>🟡 Orta</option>
+                        <option value="yuksek">🔴 Yüksek</option>
+                    </select>
+                </div>
+                <div class="detay-grubu">
+                    <label for="kategori-secimi">Kategori</label>
+                    <select id="kategori-secimi">
+                        <option value="">Kategori Yok</option>
+                        <option value="is">💼 İş</option>
+                        <option value="kisisel">🏠 Kişisel</option>
+                        <option value="okul">🎓 Okul</option>
+                    </select>
+                </div>
+                <div class="detay-grubu">
+                    <label for="son-tarih-secimi">Son Tarih</label>
+                    <input type="date" id="son-tarih-secimi">
+                </div>
+            </div>
+
+            <div class="filtre-alani">
+                <button class="filtre-btn aktif" data-filtre="hepsi">Hepsi</button>
+                <button class="filtre-btn" data-filtre="yapilacak">Yapılacaklar</button>
+                <button class="filtre-btn" data-filtre="tamamlanan">Tamamlananlar</button>
+            </div>
+
+            <div class="ikincil-filtre-alani">
+                <select id="kategori-filtre-secimi" class="mini-filtre" title="Kategoriye göre filtrele">
+                    <option value="hepsi">Tüm Kategoriler</option>
+                    <option value="is">💼 İş</option>
+                    <option value="kisisel">🏠 Kişisel</option>
+                    <option value="okul">🎓 Okul</option>
+                    <option value="none">🏷️ Kategorisiz</option>
+                </select>
+                <select id="oncelik-filtre-secimi" class="mini-filtre" title="Önceliğe göre filtrele">
+                    <option value="hepsi">Tüm Öncelikler</option>
+                    <option value="yuksek">🔴 Yüksek</option>
+                    <option value="orta">🟡 Orta</option>
+                    <option value="dusuk">🟢 Düşük</option>
+                </select>
+            </div>
+
+            <ul id="gorev-listesi"></ul>
+
+            <p id="gorev-sayaci" class="gorev-sayaci"></p>
+        </div>
+
+        <div class="hafiza-bolum">
+            <div class="hafiza-baslik-alani">
+                <h3>🗑️ Geri Dönüşüm Kutusu</h3>
+                <button id="kutuyu-bosalt-butonu" class="canli-btn kutuyu-bosalt-btn">Kutuyu Boşalt</button>
+            </div>
+            <ul id="hafiza-listesi"></ul>
+        </div>
+
+        <div class="yedekleme-bolum">
+            <button id="disa-aktar-butonu" class="yedekleme-btn">⬇️ Dışa Aktar</button>
+            <button id="ice-aktar-butonu" class="yedekleme-btn">⬆️ İçe Aktar</button>
+            <input type="file" id="ice-aktar-input" accept=".json" hidden>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

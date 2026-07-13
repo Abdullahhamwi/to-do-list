@@ -1,0 +1,32 @@
+[
+  {
+    "id": "g178392777281034970",
+    "metin": "naber",
+    "tamamlandi": true,
+    "oncelik": "dusuk",
+    "kategori": "kisisel",
+    "sonTarih": "2026-07-15",
+    "silindi": false,
+    "sira": 1783927772810
+  },
+  {
+    "id": "g178392782713945494",
+    "metin": "top",
+    "tamamlandi": false,
+    "oncelik": "dusuk",
+    "kategori": "kisisel",
+    "sonTarih": "2026-07-08",
+    "silindi": true,
+    "sira": 1783927827139
+  },
+  {
+    "id": "g178392784131222497",
+    "metin": "gel",
+    "tamamlandi": true,
+    "oncelik": "dusuk",
+    "kategori": "is",
+    "sonTarih": "2026-07-29",
+    "silindi": false,
+    "sira": 1783927841312
+  }
+]
